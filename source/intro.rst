@@ -4,13 +4,13 @@ autotools是用来干什么的
 building useful, solid and distribution-friendly packages
 
 autotools是什么
-=======================
+------------------
 GNU build chain
 
 
 
 autotools包括什么
-=======================
+-------------------
 
 autoconf, automake, libtool, pkg-config, and so on.
 
