@@ -24,22 +24,33 @@ autoconf, automake, libtool, pkg-config, and so on.
 
 autoconf 用来生成configure脚本
 
-automake 用来 做什么的?
+automake 用来 生成Makefile.in
 
-libtool 用来简化 链接选项的
+libtool 用来 包装gcc 的
      
+pkg-config 也是用来包装 编译连接选项的
 
-pkg-config 也是用来简化编译连接选项的
-     pkg-config looks in /usr/lib/pkgconfig, /usr/share/pkgconfig,/usr/local/lib/pkgconfig and /usr/local/share/pkgconfig
+autotools的作用
+-------------------
 
-     PKG_CONFIG_PATH
-     export PKG_CONFIG_PATH=/opt/gtk/lib/pkgconfig:$PKG_CONFIG_PATH
-     一般编译源码的时候会生成 .pc文件,然后安装的时候安装到相应目录.
 
-     使用的话,像下面这样子就可以了,但是有时候会出现一些问题,例如,pkg-config –cflags libcjson 显示为空,pkg-config –libs libcjson 
 
-     cc program.c $(pkg-config --cflags --libs gnomeui)
-     gcc -c `pkg-config --cflags glib-2.0` sample.c
+autoconf automake 在 \*nix 混战时代是 非常有效的手段,但随着系统的逐步统一,这写跨平台的优势已经很小了
+
+例如我直接写 Makefile 就可以 在各个平台使用了,不用使用autoconf automake
+
+不过 autoconf 做出来的 configure 文件 是大多数开源代码中的标配
+还有部分源码已经转向cmake 管理
+
+autoconf automake 封装了 各个平台的 项目级别的编译链接过程
+libtool 封装了 各个平台的 文件级别 的 编译连接过程
+pkg-config 封装了 各个平台的 编译过程级别 的 编译选项
+
+autoconf 和 automake 是单独一体的, 但是也可以在 makefile.am 中用 pkg-config 命令的输出作为编译链接选项
+
+libtool 可以包含 pkg-config
+
+autoconf 和 automake 不能包含 libtool
 
 
 
