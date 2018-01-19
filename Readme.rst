@@ -1,7 +1,7 @@
 learn_autotools
 ==================
 .. image:: https://readthedocs.org/projects/learn-autotools/badge/?version=latest
-:target: http://learn-autotools.readthedocs.io/en/latest/?badge=latest
+     :target: http://learn-autotools.readthedocs.io/en/latest/?badge=latest
 
 这是什么
 --------
