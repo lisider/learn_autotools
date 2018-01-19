@@ -44,6 +44,7 @@ libtool 文件类型
 ----------------
 
 .. code-block:: shell
+
      $ file /usr/bin/libtool
      /usr/bin/libtool: Bourne-Again shell script, ASCII text executable
 
@@ -75,6 +76,8 @@ libtool 的实质
 
 命令怎么键入
 ------------
+.. code-block:: shell
+
      编译
      libtool --mode=compile gcc -g -O -c foo.c
      libtool --mode=compile --tag=CC mipsel-linux-gcc -g -I../include -c BTX.c
@@ -90,6 +93,8 @@ libtool 的实质
 
 命令的执行过程
 --------------
+.. code-block:: shell
+
      编译的时候
      1.创建.libs
 
