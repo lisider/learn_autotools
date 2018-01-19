@@ -11,10 +11,14 @@ Welcome to learn_autotools's documentation!
    :caption: Contents:
 
    intro
-   autoconf
-   automake
-   pkg-config
-   libtool
+   flow
+   flow_intent
+   files_todo
+   build
+   tools/autoconf
+   tools/automake
+   tools/pkg-config
+   tools/libtool
 
 
 Indices and tables
